@@ -6,4 +6,23 @@
         FROM TBL_MEMBER
         WHERE ID = #{id}
     </select>
+
+    <insert id="insert" parameterType="MemberVO">
+        <selectKey order="BEFORE" keyProperty="id" resultType="Long">
+            SELECT SEQ_MEMBER.NEXTVAL FROM DUAL
+        </selectKey>
+        INSERT INTO TBL_MEMBER (ID, MEMBER_EMAIL, MEMBER_PASSWORD, MEMBER_NAME)
+        VALUES(#{id}, #{memberEmail}, #{memberPassword}, #{memberName})
+    </insert>
+
+    <update id="update" parameterType="MemberVO">
+        UPDATE TBL_MEMBER
+        SET MEMBER_PASSWORD = #{memberPassword}, MEMBER_NAME = #{memberName}
+        WHERE ID = #{id}
+    </update>
+
+    <delete id="delete" parameterType="Long">
+        DELETE FROM TBL_MEMBER
+        WHERE ID = #{id}
+    </delete>
 </mapper>

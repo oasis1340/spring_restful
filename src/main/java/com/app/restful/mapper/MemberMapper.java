@@ -8,5 +8,12 @@ import java.util.Optional;
 
 @Mapper
 public interface MemberMapper {
+//    멤버 조회
     public Optional<MemberVO> select(Long id);
+//    회원 가입
+    public void insert(MemberVO memberVO);
+//    회원 정보 수정
+    public void update(MemberVO memberVO);
+//    회원 탈퇴
+    public void delete(Long id);
 }

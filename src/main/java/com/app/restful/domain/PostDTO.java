@@ -9,6 +9,7 @@ public class PostDTO {
     Long id;
     String postTitle;
     String postContent;
+    Long postReadCount;
     Long memberId;
-    Long postId;
+    String memberName;
 }

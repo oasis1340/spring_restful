@@ -19,4 +19,19 @@ public class MemberServiceImpl implements MemberService {
     public Optional<MemberVO> getMemberInfo(Long id) {
         return memberDAO.findById(id);
     }
+//  회원 가입
+    @Override
+    public void join(MemberVO memberVO) {
+        memberDAO.save(memberVO);
+    }
+//  회원 정보 수정
+    @Override
+    public void edit(MemberVO memberVO) {
+        memberDAO.modify(memberVO);
+    }
+//  회원 탈퇴
+    @Override
+    public void withdraw(Long id) {
+        memberDAO.withdraw(id);
+    }
 }

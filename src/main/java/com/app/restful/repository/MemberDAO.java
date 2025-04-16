@@ -17,4 +17,16 @@ public class MemberDAO {
     public Optional<MemberVO> findById(Long id){
         return memberMapper.select(id);
     }
+
+    public void save(MemberVO memberVO){
+        memberMapper.insert(memberVO);
+    }
+
+    public void modify(MemberVO memberVO){
+        memberMapper.update(memberVO);
+    }
+
+    public void withdraw(Long id){
+        memberMapper.delete(id);
+    }
 }
