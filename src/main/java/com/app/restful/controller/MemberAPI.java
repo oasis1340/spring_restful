@@ -73,7 +73,7 @@ public class MemberAPI {
     @ApiResponse(responseCode = "200", description = "회원탈퇴 성공")
     @Parameter(
             name = "id",
-            description = "게시글 번호",
+            description = "회원 번호",
             schema = @Schema(type="number"),
             in = ParameterIn.PATH,
             required = true

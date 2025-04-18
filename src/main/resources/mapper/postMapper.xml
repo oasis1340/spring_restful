@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.app.restful.mapper.PostMapper">
     <select id="selectAll" resultType="PostDTO">
-        SELECT TP.POST_TITLE, TP.POST_CONTENT, TP.POST_READ_COUNT, TP.MEMBER_ID
+        SELECT TP.ID ,TP.POST_TITLE, TP.POST_CONTENT, TP.POST_READ_COUNT, TP.MEMBER_ID
         FROM TBL_POST TP
                  JOIN TBL_MEMBER TM
                       ON TP.MEMBER_ID = TM.ID

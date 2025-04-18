@@ -18,7 +18,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/posts/api/*")
 @RequiredArgsConstructor
-public class PostController {
+public class PostAPI {
     private final PostService postService;
 
 //    게시글의 전체 조회
